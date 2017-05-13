@@ -3,9 +3,9 @@
   ********************************** */
 /* *********************************
    Some Style Overrides on Bootstrap
-  ********************************** */
+  ********************************** 
 .navbar-inverse {
-  background: rgba(62, 195, 246, 0);
+  background-color: #fff;
   border-bottom: none;
 }
 
@@ -19,7 +19,7 @@
 }
 @media (max-width: 767px) {
   .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    background: rgba(255, 255, 255, 0.75);
+    background-color: #fff;
   }
 }
 
@@ -28,8 +28,8 @@
 }
 
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-  color: #22F;
-}
+  color: #fff;
+}*/
 
 /* *********************************
            Toolbar Logo
@@ -50,8 +50,20 @@
 /* *********************************
            Big Logo
   ********************************** */
+.circle-logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #f780f7;
+  line-height: 200px;
+  text-align: center;
+  background: #000;
+  margin-bottom: 20px;
+}
+
 .big-logo-row {
-  background: gold;
+  background-color: #ffe6e6;
 }
 .big-logo-row .big-logo-container {
   padding-top: 50px;
@@ -91,4 +103,10 @@
   .big-logo-row h1 {
     font-size: 12em;
   }
+}
+/* *********************************
+           Site Basics
+  ********************************** */
+section {
+	margin: 20px 0;
 }
