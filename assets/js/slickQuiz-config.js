@@ -48,8 +48,7 @@ var quizJSON = {
             "incorrect": "<p><span>No.</span> You can't buy a car at the zoo or in a grocery store, try Ebay or a used car lot instead.</p>" // no comma here
         },
         { // Question 4
-            "q": "If you know it, tell us your Myers Brigg. Myers Brigg is just one way of describing personality, but we think it’s a fun way! Don’t forget, your Myers Brigg can change over the course of your life based on experiences. Neuroplasticity! You can take the test at 16 personalities: https://www.16personalities.com/personality-types
-",
+            "q": "If you know it, tell us your Myers Brigg. Myers Brigg is just one way of describing personality, but we think it’s a fun way! Don’t forget, your Myers Brigg can change over the course of your life based on experiences. Neuroplasticity! You can take the test at 16 personalities: https://www.16personalities.com/personality-types",
             "a": [
                 {"option": "INTJ, INFP, ENFP",    "correct": true},
                 {"option": "ENTP, INFJ, ISTJ, ISTP",     "correct": true},
