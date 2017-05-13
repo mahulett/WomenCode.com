@@ -7,6 +7,7 @@
 .navbar-inverse {
   background-color: #fff;
   border-bottom: none;
+  text-transform: uppercase;
 }
 
 .navbar-inverse .navbar-toggle {
