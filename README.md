@@ -34,5 +34,7 @@ _I want to.._
 6. Create a Pull Request:
 - open the repo in your browser
 - click the "branches" tab
-- find your branch name and press "New Pull Request"
--
+- find your branch name and press "New pull request"
+- if you'd like to give more details about the changes you made, leave them in comment section provided
+- if you see "Able to merge." in green, click "Create pull request"
+- if your branch has no conflicts with master, someone will merge your pull request 
