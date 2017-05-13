@@ -15,58 +15,106 @@ var quizJSON = {
     },
     "questions": [
         { // Question 1
-            "q": "When working on a team, I’m most interested in ______",
+            "q": "I have been professionally working for:",
             "a": [
-                {"option": "Front End - Finding fresh solutions to hard problems",      "Awesome!": true},
-                {"option": "Back End - Building something new from scratch",     "Awesome!": true},
-                {"option": "Data Science - Using facts, figures and logic to get things done",      "Awesome!": true},
-                {"option": "UX - People! I am all about trying to understand the needs of users",     "Awesome!": true},
-                {"option": "Project Management - Getting the project done efficiently, and on time!",     "Awesome!": true},
+                {"option": "0-5 years",      "correct": true},
+                {"option": "5-10 years",     "correct": true},
+                {"option": "10+ years",      "correct": true}
             ],
             "Awesome!": "<p><span>Awesome!</p>",
             "incorrect": "<p><span>Uhh no.</span> It's the first letter of the alphabet. Did you actually <em>go</em> to kindergarden?</p>" // no comma here
         },
         { // Question 2
-            "q": "How many inches of rain does Michigan get on average per year?",
+            "q": "My prior experience (school or work), has provided me with the following level of technology skills:",
             "a": [
-                {"option": "149",    "correct": false},
-                {"option": "32",     "correct": true},
-                {"option": "3",      "correct": false},
-                {"option": "1291",   "correct": false} // no comma here
+                {"option": "Basic",    "correct": true},
+                {"option": "Intermediate",     "correct": true},
+                {"option": "Advanced",      "correct": true},
+                {"option": "None",   "correct": true}
             ],
-            "correct": "<p><span>Holy bananas!</span> I didn't actually expect you to know that! Correct!</p>",
+            "correct": "<p><span>Holy bananas!</span></p>",
             "incorrect": "<p><span>Fail.</span> Sorry. You lose. It actually rains approximately 32 inches a year in Michigan.</p>" // no comma here
         },
         { // Question 3
-            "q": "In which of these places can you purchase a car?",
+            "q": "In my job I’m most interested in ______.",
             "a": [
-                {"option": "The Zoo",        "correct": false},
-                {"option": "Ebay",           "correct": true},
-                {"option": "Grocery Store",  "correct": false},
-                {"option": "Used Car Lot",   "correct": true} // no comma here
-            ],
-            "correct": "<p><span>Nice!</span> You can indeed buy a car on Ebay or in a used car lot.</p>",
+                {"option": "Finding fresh solutions to hard problems",        "correct": true},
+                {"option": "Building something new from scratch",           "correct": true},
+                {"option": "Using facts, figures and logic to get things done",  "correct": true},
+                {"option": "People! I am all about trying to understand the needs of users",   "correct": true},
+                {"option": "Getting the project done efficiently, and on time!",   "correct": true}
+        ],
+            "correct": "<p><span>Nice!</span></p>",
             "incorrect": "<p><span>No.</span> You can't buy a car at the zoo or in a grocery store, try Ebay or a used car lot instead.</p>" // no comma here
         },
         { // Question 4
-            "q": "Is Earth bigger than a basketball?",
+            "q": "If you know it, tell us your Myers Brigg. Myers Brigg is just one way of describing personality, but we think it’s a fun way! Don’t forget, your Myers Brigg can change over the course of your life based on experiences. Neuroplasticity! You can take the test at 16 personalities: https://www.16personalities.com/personality-types
+",
             "a": [
-                {"option": "Yes",    "correct": true},
-                {"option": "No",     "correct": false} // no comma here
+                {"option": "INTJ, INFP, ENFP",    "correct": true},
+                {"option": "ENTP, INFJ, ISTJ, ISTP",     "correct": true},
+                {"option": "INTP, ESTP",     "correct": true},
+                {"option": "INFP, ISFP, ESFP",     "correct": true},
+                {"option": "ENTJ, ENFJ, ISFJ, ESFJ",     "correct": true}
             ],
-            "correct": "<p><span>Good Job!</span> You must be very observant!</p>",
+            "correct": "<p><span>Cool!</span></p>",
             "incorrect": "<p><span>ERRRR!</span> What planet Earth are <em>you</em> living on?!?</p>" // no comma here
         },
         { // Question 5
-            "q": "Where are you right now? Select ALL that apply.",
+            "q": "My ideal work environment is:",
             "a": [
-                {"option": "Planet Earth",   "correct": true},
-                {"option": "Pluto",          "correct": false},
-                {"option": "At a computer",  "correct": true},
-                {"option": "The Milky Way",  "correct": true} // no comma here
+                {"option": "Working collaboratively on a team in an office",   "correct": true},
+                {"option": "Working alone or remotely from home",          "correct": true},
+                {"option": "Having the flexibility to work remotely or in a team",  "correct": true}
             ],
             "correct": "<p><span>Brilliant!</span> You're seriously a genius, (wo)man.</p>",
             "incorrect": "<p><span>Not Quite.</span> You're actually on Planet Earth, in The Milky Way, At a computer. But nice try.</p>" // no comma here
         } // no comma here
+        { // Question 6
+            "q": " I find loud work environments:",
+            "a": [
+                {"option": "Exciting and motivating",   "correct": true},
+                {"option": "Distracting and draining",          "correct": true},
+                {"option": "It depends on what I am working on",  "correct": true}
+            ],
+            "correct": "<p><span>Awesome!</span></p>",
+            "incorrect": "<p><span>Not Quite.</span> You're actually on Planet Earth, in The Milky Way, At a computer. But nice try.</p>" // no comma here
+        } // { // Question 7
+            "q": "I would prefer to work for:",
+            "a": [
+                {"option": "A well established corporation",   "correct": true},
+                {"option": "A startup",          "correct": true},
+                {"option": "A non-profit or educational organization",  "correct": true}
+            ],
+            "correct": "<p><span>Alrighty!</span></p>",
+            "incorrect": "<p><span>Not Quite.</span> You're actually on Planet Earth, in The Milky Way, At a computer. But nice try.</p>" // no comma here
+        } // { // Question 8
+            "q": "I like to learn new information and how to complete a task:",
+            "a": [
+                {"option": "By diving in and working hands on",   "correct": true},
+                {"option": "By having someone tell or show me",          "correct": true},
+                {"option": "By reading instructions and looking at graphics",  "correct": true}
+            ],
+            "correct": "<p><span>Nice!</span></p>",
+            "incorrect": "<p><span>Not Quite.</span> You're actually on Planet Earth, in The Milky Way, At a computer. But nice try.</p>" // no comma here
+        } // { // Question 9
+            "q": " I work best when my supervisor:",
+            "a": [
+                {"option": "Provides me with constant direction",   "correct": true},
+                {"option": "Does not give me constant direction but checks ins from time to time",          "correct": true},
+                {"option": "Gives me full autonomy over a task",  "correct": true}
+            ],
+            "correct": "<p><span>Brilliant!</span></p>",
+            "incorrect": "<p><span>Not Quite.</span> You're actually on Planet Earth, in The Milky Way, At a computer. But nice try.</p>" // no comma here
+        } // { // Question 10
+            "q": "MWhen I am given a new task or a problem to solve:",
+            "a": [
+                {"option": "I like to draw diagrams and use sketches to find a solution",   "correct": true},
+                {"option": "I like to fidget with the content or object to find a solution",          "correct": true},
+                {"option": "I like to talk and rationalize my processes out loud to find a solution",  "correct": true}
+            ],
+            "correct": "<p><span>Wonderful!</span></p>",
+            "incorrect": "<p><span>Not Quite.</span> You're actually on Planet Earth, in The Milky Way, At a computer. But nice try.</p>" // no comma here
+        } // 
     ]
 };
