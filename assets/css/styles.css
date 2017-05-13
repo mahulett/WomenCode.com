@@ -141,6 +141,14 @@ p {
 .navbar {
     border-radius: 0;
 }
+	
+/* *********************************
+            Body
+  ********************************** */
+.take-quiz {
+background-image: url(assets/img/quiztaker.jpg); 	
+	}
+	
 }
 
 
