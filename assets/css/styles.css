@@ -66,8 +66,14 @@
   background-color: #fff;
 }
 .big-logo-row .big-logo-container {
-  padding-top: 50px;
+  padding: 15px 10px;
 }
+
+.big-logo-container img {
+	width: 160px;
+	height: auto;
+}
+
 .big-logo-row h1 {
   font-size: 4em;
   margin: 0;
