@@ -149,12 +149,14 @@ p {
 	text-transform: uppercase;
 	font-family: 'Lora', serif;
 	letter-spacing: 1px;
+	margin-bottom: 0;
 	
 }
 
 @media (min-width: 768px) {
 .navbar {
     border-radius: 0;
+}
 }
 	
 /* *********************************
@@ -166,8 +168,8 @@ p {
 	-o-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
+	padding: 60px 0;
 }
 	
-}
 
 
