@@ -1,6 +1,17 @@
 # WomenCode.com
 A marketing site dedicated to drawing women into tech
 
+## Team
+- Andrea Susnick
+- Annalee Switek
+- Christina Deno
+- Dominique Negron
+- Emily Butte
+- Lauren Lewis
+- Marguerite Hulett
+- Melody Lam
+- Briana West
+
 ## Git Workflow
 
 _I want to.._
@@ -19,4 +30,11 @@ _I want to.._
 3. Check the status of your files (again!): ```git status```
 (all of your changed files should be green)
 4. Create a message briefly describing your commit: ```git commit -m "adds this update to feature x"```
-5. "Push" your files to GitHub: ```git push origin head```
+5. "Push" your changes to GitHub: ```git push origin head```
+6. Create a Pull Request:
+- open the repo in your browser
+- click the "branches" tab
+- find your branch name and press "New pull request"
+- if you'd like to give more details about the changes you made, leave them in comment section provided
+- if you see "Able to merge." in green, click "Create pull request"
+- if your branch has no conflicts with master, someone will merge your pull request 
