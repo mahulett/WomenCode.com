@@ -7,7 +7,6 @@
 .navbar-inverse {
   background-color: #fff;
   border-bottom: none;
-  text-transform: uppercase;
 }
 
 .navbar-inverse .navbar-toggle {
@@ -143,6 +142,8 @@ p {
 .navbar-inverse {
 	background-color: #202021;
 	border-color: #202021;
+	text-transform: uppercase;
+	
 }
 
 @media (min-width: 768px) {
@@ -154,7 +155,7 @@ p {
             Body
   ********************************** */
 .take-quiz {
-background-image: url("assets/img/quiztaker.jpg"); 	
+background-image: url("../img/quiztaker.jpg"); 	
 	}
 	
 }
