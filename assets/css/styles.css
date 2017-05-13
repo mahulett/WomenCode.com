@@ -63,7 +63,7 @@
 }
 
 .big-logo-row {
-  background-color: #ffe6e6;
+  background-color: #fff;
 }
 .big-logo-row .big-logo-container {
   padding-top: 50px;
@@ -110,3 +110,37 @@
 section {
 	margin: 20px 0;
 }
+
+h1, h2 {
+	font-family: 'Lora', serif;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+p {
+	font-family: 'Chivo', sans-serif;
+	font-size: 1em;
+}
+
+/* *********************************
+           Nav Bar
+  ********************************** */
+.navbar-inverse {
+	background-color: #202021;
+	border-color: #202021;
+}
+
+@media (min-width: 768px) {
+.navbar {
+    border-radius: 0;
+}
+}
+
+
