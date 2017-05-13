@@ -4,25 +4,26 @@
 
 var quizJSON = {
     "info": {
-        "name":    "Test Your Knowledge!!",
-        "main":    "<p>Think you're smart enough to be on Jeopardy? Find out with this super crazy knowledge quiz!</p>",
+        "name":    "!!",
+        "main":    "<p>Confused about which tech career path to pursue? Find out which might be a good fit with this quiz!</p>",
         "results": "<h5>Learn More</h5><p>Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh vel nisi. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus.</p>",
-        "level1":  "Jeopardy Ready",
-        "level2":  "Jeopardy Contender",
-        "level3":  "Jeopardy Amateur",
-        "level4":  "Jeopardy Newb",
-        "level5":  "Stay in school, kid..." // no comma here
+        "level1":  "Front End Developer",
+        "level2":  "Back End Developer",
+        "level3":  "Data Scientist",
+        "level4":  "UX Designer",
+        "level5":  "Project Manager"
     },
     "questions": [
         { // Question 1
-            "q": "What number is the letter A in the English alphabet?",
+            "q": "When working on a team, I’m most interested in ______",
             "a": [
-                {"option": "8",      "correct": false},
-                {"option": "14",     "correct": false},
-                {"option": "1",      "correct": true},
-                {"option": "23",     "correct": false} // no comma here
+                {"option": "Front End - Finding fresh solutions to hard problems",      "Awesome!": true},
+                {"option": "Back End - Building something new from scratch",     "Awesome!": true},
+                {"option": "Data Science - Using facts, figures and logic to get things done",      "Awesome!": true},
+                {"option": "UX - People! I am all about trying to understand the needs of users",     "Awesome!": true},
+                {"option": "Project Management - Getting the project done efficiently, and on time!",     "Awesome!": true},
             ],
-            "correct": "<p><span>That's right!</span> The letter A is the first letter in the alphabet!</p>",
+            "Awesome!": "<p><span>Awesome!</p>",
             "incorrect": "<p><span>Uhh no.</span> It's the first letter of the alphabet. Did you actually <em>go</em> to kindergarden?</p>" // no comma here
         },
         { // Question 2
