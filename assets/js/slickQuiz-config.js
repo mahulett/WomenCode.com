@@ -68,7 +68,7 @@ var quizJSON = {
             ],
             "correct": "<p><span>Brilliant!</span> You're seriously a genius, (wo)man.</p>",
             "incorrect": "<p><span>Not Quite.</span> You're actually on Planet Earth, in The Milky Way, At a computer. But nice try.</p>" // no comma here
-        } // no comma here
+        },
         { // Question 6
             "q": " I find loud work environments:",
             "a": [
@@ -77,8 +77,9 @@ var quizJSON = {
                 {"option": "It depends on what I am working on",  "correct": true}
             ],
             "correct": "<p><span>Awesome!</span></p>",
-            "incorrect": "<p><span>Not Quite.</span> You're actually on Planet Earth, in The Milky Way, At a computer. But nice try.</p>" // no comma here
-        } // { // Question 7
+            "incorrect": "<p><span>Not Quite.</span> You're actually on Planet Earth, in The Milky Way, At a computer. But nice try.</p>"
+        },
+		{ // Question 7
             "q": "I would prefer to work for:",
             "a": [
                 {"option": "A well established corporation",   "correct": true},
@@ -86,8 +87,9 @@ var quizJSON = {
                 {"option": "A non-profit or educational organization",  "correct": true}
             ],
             "correct": "<p><span>Alrighty!</span></p>",
-            "incorrect": "<p><span>Not Quite.</span> You're actually on Planet Earth, in The Milky Way, At a computer. But nice try.</p>" // no comma here
-        } // { // Question 8
+            "incorrect": "<p><span>Not Quite.</span> You're actually on Planet Earth, in The Milky Way, At a computer. But nice try.</p>"
+		},
+        { // Question 8
             "q": "I like to learn new information and how to complete a task:",
             "a": [
                 {"option": "By diving in and working hands on",   "correct": true},
@@ -95,8 +97,8 @@ var quizJSON = {
                 {"option": "By reading instructions and looking at graphics",  "correct": true}
             ],
             "correct": "<p><span>Nice!</span></p>",
-            "incorrect": "<p><span>Not Quite.</span> You're actually on Planet Earth, in The Milky Way, At a computer. But nice try.</p>" // no comma here
-        } // { // Question 9
+		"incorrect": "<p><span>Not Quite.</span> You're actually on Planet Earth, in The Milky Way, At a computer. But nice try.</p>"},
+		{ // Question 9
             "q": " I work best when my supervisor:",
             "a": [
                 {"option": "Provides me with constant direction",   "correct": true},
@@ -104,8 +106,8 @@ var quizJSON = {
                 {"option": "Gives me full autonomy over a task",  "correct": true}
             ],
             "correct": "<p><span>Brilliant!</span></p>",
-            "incorrect": "<p><span>Not Quite.</span> You're actually on Planet Earth, in The Milky Way, At a computer. But nice try.</p>" // no comma here
-        } // { // Question 10
+		"incorrect": "<p><span>Not Quite.</span> You're actually on Planet Earth, in The Milky Way, At a computer. But nice try.</p>"},
+        { // Question 10
             "q": "MWhen I am given a new task or a problem to solve:",
             "a": [
                 {"option": "I like to draw diagrams and use sketches to find a solution",   "correct": true},
