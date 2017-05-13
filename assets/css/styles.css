@@ -152,7 +152,7 @@ p {
             Body
   ********************************** */
 .take-quiz {
-background-image: url(assets/img/quiztaker.jpg); 	
+background-image: url("assets/img/quiztaker.jpg"); 	
 	}
 	
 }
