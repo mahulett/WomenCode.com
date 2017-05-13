@@ -161,8 +161,12 @@ p {
             Body
   ********************************** */
 .take-quiz {
-background-image: url("../img/quiztaker.jpg"); 	
-	}
+	background-image: url("../img/quiztaker.jpg") center center; 
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+}
 	
 }
 
