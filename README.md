@@ -37,4 +37,4 @@ _I want to.._
 - find your branch name and press "New pull request"
 - if you'd like to give more details about the changes you made, leave them in comment section provided
 - if you see "Able to merge." in green, click "Create pull request"
-- if your branch has no conflicts with master, someone will merge your pull request
+- if your branch has no conflicts with master, feel free to merge your PR!
