@@ -1,44 +1,18 @@
+/* SITE BASICS */
 
-
-/* *********************************
-           Toolbar Logo
-  ********************************** */
-.small-logo-container {
-  padding-top: 50px;
-  height: 50px;
-  overflow: hidden;
-  position: absolute;
+:root {
+  --red-color: #EF3B3A;
+  --dark-red-color: #a50e0d;
+  --light-teal-color: #21def7;
+  --medium-teal-color: #07b1c8;
+  --dark-teal-color: #046d7b;
+  --light-gray-color: #cbcbcb;
+  --dark-gray-color: #202021;
 }
-
-.small-logo {
-  color: white;
-  font-size: 2.5em;
-  padding-bottom: 2px;
-}
-
-/* *********************************
-           Big Logo
-  ********************************** */
-
-.header-logo {
-  display: block;
-  width: 50px;
-	height: auto;
-	margin: 15px auto;
-}
-
-@media (min-width: 768px) {
-  .header-logo {
-    width: 160px;
-  }
-}
-
-/* *********************************
-           Site Basics
-  ********************************** */
 
 body {
-  color: #101010;
+  color: var(--dark-gray-color);
+  font-size: 16px;
 }
 
 h1, h2 {
@@ -62,21 +36,38 @@ p {
 	font-size: 1em;
 }
 
-.btn {
-  width: 50%;
+.button {
+  padding: 8px 16px;
 	font-size: 1.5em;
 	text-transform: uppercase;
+  margin-top: 40px;
+  border-radius: 4px;
+  border: 0;
+  transition: all 0.5s ease-in;
+  color: #fff;
+  background: var(--red-color);
+}
+
+.button:hover {
+  color: #fff;
+  background: var(--dark-red-color);
+  text-decoration: none;
+}
+
+/* HEADER */
+
+.header-logo {
+  display: block;
+  width: 50px;
+  height: auto;
+  margin: 15px auto;
 }
 
 @media (min-width: 768px) {
-  .btn {
-    width: 25%; 
-  } 
+  .header-logo {
+    width: 160px;
+  }
 }
-
-/* *********************************
-           Nav Bar
-  ********************************** */
 
 .navbar-inverse {
 	background-color: #202021;
@@ -99,15 +90,9 @@ p {
   ********************************** */
 
 .hero {
-	background: url("../img/quiztaker.jpg") center center; 
-	-webkit-background-size: cover;
-	-o-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
+	background: url("../img/quiztaker.jpg") center center/cover; 
 	padding: 60px 0;
 	height: calc(100vh - 240px);
-  display: flex;
-  flex-flow: column nowrap;
 }
 
 .hero-title {
@@ -116,31 +101,76 @@ p {
   color: #EAEBED;
 }
 
+.callout {
+  padding: 40px 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.fa-quote-left, .fa-quote-right {
+  font-size: 2em;
+  color: #EF3B3A;
+}
+
+.fa-quote-left {
+  align-self: center;
+}
+
+.fa-quote-right {
+  align-self: flex-end;
+}
+
 .callout-title {
+  margin-top: 0;
+}
+
+.callout-quote {
+  font-size: 1.5em;
+  margin: 1em 0;
+}
+
+.callout-source {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--light-gray-color);
+}
+
+.links {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .links {
+    flex-flow: row nowrap;
+  }
 }
 	
-.resources-tile {
+.links-tile {
 	text-align: center;
 	font-size: 2em;
 	font-family: 'Lora', serif;
 	font-weight: bold;
 	padding: 40px 10px;
 	margin-bottom: 20px;
+  flex: 1 0 30%;
 }
 
-.tile a {
+.links-tile a {
 	color: #202021;
 }
 
 .path-tile {
-	background: #eaebed;
+	background: var(--light-teal-color);
 }
 
 .glossary-tile {
-	background: #dbdbdb;
+	background: var(--medium-teal-color);
 }
 
 .resource-tile {
-	background: #07b1c8;
+	background: var(--dark-teal-color);
 }
 
