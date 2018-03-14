@@ -108,9 +108,13 @@ p {
   align-items: center;
 }
 
+.callout-title {
+
+}
+
 .fa-quote-left, .fa-quote-right {
   font-size: 2em;
-  color: #EF3B3A;
+  color: var(--medium-teal-color);
 }
 
 .fa-quote-left {
@@ -134,6 +138,12 @@ p {
   text-transform: uppercase;
   font-weight: bold;
   color: var(--light-gray-color);
+  transition: color 0.5s;
+}
+
+.callout-source:hover {
+  text-decoration: none;
+  color: var(--medium-teal-color);
 }
 
 .links {
