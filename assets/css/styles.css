@@ -12,8 +12,11 @@
 
 body {
   color: var(--dark-gray-color);
+  font-family: 'Chivo', sans-serif;
   font-size: 16px;
 }
+
+h1, h2, h3 {font-weight: bold;}
 
 h1, h2 {
 	font-family: 'Lora', serif;
@@ -24,15 +27,18 @@ h1, h2 {
 }
 
 h1 {
-	font-size: 2em;
+	font-size: 2.369em;
 }
 
 h2 {
-	font-size: 1.5em;
+	font-size: 1.777em;
+}
+
+h3 {
+  font-size: 1.333em;
 }
 
 p {
-	font-family: 'Chivo', sans-serif;
 	font-size: 1em;
 }
 
@@ -40,6 +46,7 @@ p {
   padding: 8px 16px;
 	font-size: 1.5em;
 	text-transform: uppercase;
+  text-align: center;
   margin-top: 40px;
   border-radius: 4px;
   border: 0;
@@ -52,6 +59,10 @@ p {
   color: #fff;
   background: var(--dark-red-color);
   text-decoration: none;
+}
+
+.content-main {
+  padding: 40px 0;
 }
 
 /* HEADER */
@@ -86,7 +97,7 @@ p {
 }
 	
 /* *********************************
-            Body
+            HOMEPAGE
   ********************************** */
 
 .hero {
@@ -109,20 +120,13 @@ p {
 }
 
 .callout-title {
-
-}
-
-.fa-quote-left, .fa-quote-right {
-  font-size: 2em;
-  color: var(--medium-teal-color);
+  font-size: 1.333em;
 }
 
 .fa-quote-left {
+  font-size: 2em;
+  color: var(--medium-teal-color);
   align-self: center;
-}
-
-.fa-quote-right {
-  align-self: flex-end;
 }
 
 .callout-title {
@@ -184,3 +188,8 @@ p {
 	background: var(--dark-teal-color);
 }
 
+
+
+/* *********************************
+            HOMEPAGE
+********************************** */
