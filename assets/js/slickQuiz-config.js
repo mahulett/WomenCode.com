@@ -70,7 +70,7 @@ var quizJSON = {
             "incorrect": "<p><span>Brilliant!</p>" // no comma here
         },
         { // Question 6
-            "q": " I find loud work environments:",
+            "q": "I find loud work environments:",
             "a": [
                 {"option": "Exciting and motivating",   "correct": true},
                 {"option": "Distracting and draining",          "correct": true},
@@ -109,7 +109,7 @@ var quizJSON = {
             "correct": "<p><span>Brilliant!</span></p>",
 		        "incorrect": "<p><span>Brilliant!</span></p>"},
         { // Question 10
-            "q": "MWhen I am given a new task or a problem to solve:",
+            "q": "When I am given a new task or a problem to solve:",
             "a": [
                 {"option": "I like to draw diagrams and use sketches to find a solution",   "correct": true},
                 {"option": "I like to fidget with the content or object to find a solution",          "correct": true},
