@@ -34,6 +34,7 @@
                 preventUnanswered: false,
                 disableScore: false,
                 disableRanking: false,
+                enablePaths: true,
                 scoreAsPercentage: false,
                 perQuestionResponseMessaging: false,
                 perQuestionResponseAnswers: false,
@@ -97,6 +98,9 @@
             _quizHeader            = _element + ' .quizHeader',
             _quizScore             = _element + ' .quizScore',
             _quizLevel             = _element + ' .quizLevel',
+            _quizPath              = _element + ' .quizPath',
+            _quizPathCopy          = _element + ' .quizPathCopy',
+            _quizImage             = _element + ' .quizImage'
 
             // Top Level Quiz Element Objects
             $quizStarter           = $(_quizStarter),
@@ -106,7 +110,10 @@
             $quizResultsCopy       = $(_quizResultsCopy),
             $quizHeader            = $(_quizHeader),
             $quizScore             = $(_quizScore),
-            $quizLevel             = $(_quizLevel)
+            $quizLevel             = $(_quizLevel),
+            $quizPath              = $(_quizPath),
+            $quizPathCopy          = $(_quizPathCopy),
+            $quizImage             = $(_quizImage)
         ;
 
 
@@ -162,6 +169,9 @@
         // Count the number of questions
         var questionCount = questions.length;
 
+        // MAH: Create objects for paths
+        var paths = {};
+
         // Select X number of questions to load if options is set
         if (plugin.config.numberOfQuestions && questionCount >= plugin.config.numberOfQuestions) {
             questions = questions.slice(0, plugin.config.numberOfQuestions);
@@ -207,14 +217,13 @@
                 $quizName.hide().html(plugin.config.nameTemplateText
                     .replace('%name', quizValues.info.name) ).fadeIn(1000, kN(key,1));
                 $quizHeader.hide().prepend($('<div class="quizDescription">' + quizValues.info.main + '</div>')).fadeIn(1000, kN(key,2));
-                $quizResultsCopy.append(quizValues.info.results);
-
-
+                // MAH: TODO: figure out how to turn back on
+                //$quizResultsCopy.append(quizValues.info.results);
 
                 // add retry button to results view, if enabled
-                if (plugin.config.tryAgainText && plugin.config.tryAgainText !== '') {
-                    $quizResultsCopy.append('<p><a class="button ' + tryAgainClass + '" href="#">' + plugin.config.tryAgainText + '</a></p>');
-                }
+                //if (plugin.config.tryAgainText && plugin.config.tryAgainText !== '') {
+                //    $quizResultsCopy.append('<p><a class="button ' + tryAgainClass + '" href="#">' + plugin.config.tryAgainText + '</a></p>');
+                //}
 
                 // Setup questions
                 var quiz  = $('<ol class="' + questionGroupClass + '"></ol>'),
@@ -263,6 +272,7 @@
                             question.a.sort(function() { return (Math.round(Math.random())-0.5); }) :
                             question.a;
 
+
                         // prepare a name for the answer inputs based on the question
                         var selectAny     = question.select_any ? question.select_any : false,
                             forceCheckbox = question.force_checkbox ? question.force_checkbox : false,
@@ -283,7 +293,7 @@
                                 var input = '<input id="' + optionId + '" name="' + inputName +
                                             '" type="' + inputType + '" /> ';
 
-                                var optionLabel = '<label for="' + optionId + '">' + answer.option + '</label>';
+                                var optionLabel = '<label class="quizLabel" for="' + optionId + '">' + answer.option + '</label>';
 
                                 var answerContent = $('<li></li>')
                                     .append(input)
@@ -462,6 +472,20 @@
                     return false;
                 }
 
+                // MAH: Collect the paths submitted
+                var selectedPaths = [];
+                for (i in selectedAnswers) {
+                    var pathId = selectedAnswers[i];
+                    selectedPaths.push(answers[pathId].path);
+                }
+
+                // MAH: Tally paths
+                if (paths.hasOwnProperty(selectedPaths)) {
+                    paths[selectedPaths] += 1;
+                } else {
+                    paths[selectedPaths] = 1;
+                }
+
                 // Verify all/any true answers (and no false ones) were submitted
                 var correctResponse = plugin.method.compareAnswers(trueAnswers, selectedAnswers, selectAny);
 
@@ -611,20 +635,32 @@
                 if (plugin.config.disableRanking) {
                     $(_quizLevel).remove()
                 } else {
-                    var levels    = [
-                                        quizValues.info.level1, // 80-100%
-                                        quizValues.info.level2, // 60-79%
-                                        quizValues.info.level3, // 40-59%
-                                        quizValues.info.level4, // 20-39%
-                                        quizValues.info.level5  // 0-19%
-                                    ],
-                        levelRank = plugin.method.calculateLevel(score),
-                        levelText = $.isNumeric(levelRank) ? levels[levelRank] : '';
+                    // MAH: Enable showing the path
+                    if (plugin.config.enablePaths) {
+                        var pathTop = plugin.method.calculatePath(paths),
+                            path = quizValues.info.paths[pathTop],
+                            pathTitle = path.title,
+                            pathCopy = path.description;
+                            pathImage = path.image;
+                        $(_quizPath).html(pathTitle);
+                        $(_quizPath).addClass(pathTop);
+                        $(_quizPathCopy).html(pathCopy);
+                        $(_quizImage).attr('src',pathImage);
+                        $(_quizImage).attr('alt',pathTitle);
+                    } else {
+                        var levels    = [
+                                            quizValues.info.level1, // 80-100%
+                                            quizValues.info.level2, // 60-79%
+                                            quizValues.info.level3, // 40-59%
+                                            quizValues.info.level4, // 20-39%
+                                            quizValues.info.level5  // 0-19%
+                                        ],
+                            levelRank = plugin.method.calculateLevel(score),
+                            levelText = $.isNumeric(levelRank) ? levels[levelRank] : '';
 
-                    $(_quizLevel + ' span').html(levelText);
-                    $(_quizLevel).addClass('level' + levelRank);
-
-					$("div.level" + levelRank).show();
+                        $(_quizLevel + ' span').html(levelText);
+                        $(_quizLevel).addClass('level' + levelRank);
+                    }
                 }
 
                 $quizArea.fadeOut(300, function() {
@@ -657,6 +693,10 @@
                     // crafty array comparison (http://stackoverflow.com/a/7726509)
                     return ($(trueAnswers).not(selectedAnswers).length === 0 && $(selectedAnswers).not(trueAnswers).length === 0);
                 }
+            },
+
+            calculatePath: function(paths) {
+                return Object.keys(paths).reduce((a, b) => paths[a] > paths[b] ? a : b);
             },
 
             // Calculates knowledge level based on number of correct answers
