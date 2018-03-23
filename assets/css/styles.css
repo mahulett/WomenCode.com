@@ -7,13 +7,15 @@
   --medium-teal-color: #07b1c8;
   --dark-teal-color: #046d7b;
   --light-gray-color: #cbcbcb;
-  --dark-gray-color: #202021;
+  --dark-gray-color: #404040;
+
 }
 
 body {
   color: var(--dark-gray-color);
   font-family: 'Chivo', sans-serif;
   font-size: 16px;
+  background: #f7f9fc;
 }
 
 h1, h2, h3 {font-weight: bold;}
