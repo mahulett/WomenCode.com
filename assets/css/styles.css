@@ -55,6 +55,7 @@ p {
   transition: all 0.5s ease-in;
   color: #fff;
   background: var(--red-color);
+  box-shadow: 5px 5px 20px 0px rgba(204,204,204,1);
 }
 
 .button:hover {
@@ -109,9 +110,15 @@ p {
 }
 
 .hero-title {
-	font-size: 2em;
+	font-size: 1.333em;
 	text-shadow: 3px 3px 17px rgba(20, 20, 20, 1);
   color: #EAEBED;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 1.777em;
+  }
 }
 
 .callout {
@@ -168,14 +175,16 @@ p {
 	text-align: center;
 	font-size: 2em;
 	font-family: 'Lora', serif;
+  color: #fff;
 	font-weight: bold;
 	padding: 40px 10px;
 	margin-bottom: 20px;
   flex: 1 0 30%;
+  box-shadow: 5px 5px 20px 0px rgba(204,204,204,1);
 }
 
 .links-tile a {
-	color: #202021;
+	color: #fff;
 }
 
 .path-tile {
