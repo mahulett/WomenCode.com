@@ -30,6 +30,7 @@ h1, h2 {
 
 h1 {
 	font-size: 2.369em;
+  color: var(--dark-teal-color);
 }
 
 h2 {
@@ -42,6 +43,10 @@ h3 {
 
 p {
 	font-size: 1em;
+}
+
+a {
+  color: var(--medium-teal-color);
 }
 
 .button {
@@ -209,4 +214,18 @@ p {
 	background: var(--dark-teal-color);
 }
 
+/* *********************************
+            SECONDARY CONTENT
+  ********************************** */
 
+.resources-card {
+  background: #fff;
+  box-shadow: 5px 5px 20px 0px rgba(204,204,204,1);
+  border-bottom: 5px solid var(--medium-teal-color);
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.resources-card-title {
+  margin: 0.5em 0 1em;
+}
