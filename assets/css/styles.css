@@ -70,7 +70,13 @@ a {
 }
 
 .content-main {
-  padding: 40px 0;
+  padding: 20px 0 40px;
+}
+
+@media (min-width: 768px) {
+  .content-main {
+    padding: 40px 0;
+  }
 }
 
 /* HEADER */
