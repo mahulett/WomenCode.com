@@ -72,7 +72,7 @@ p {
 
 .header-logo {
   display: block;
-  width: 50px;
+  width: 60px;
   height: auto;
   margin: 15px auto;
 }
@@ -143,8 +143,13 @@ p {
 }
 
 .callout-quote {
-  font-size: 1.5em;
   margin: 1em 0;
+}
+
+@media (min-width: 768px) {
+  .callout-quote {
+    font-size: 1.5em;
+  }
 }
 
 .callout-source {
@@ -181,6 +186,11 @@ p {
 	margin-bottom: 20px;
   flex: 1 0 30%;
   box-shadow: 5px 5px 20px 0px rgba(204,204,204,1);
+}
+
+.links-tile:hover .fas {
+  animation-name: rubberBand;
+  animation-duration: 0.5s;
 }
 
 .links-tile a {
